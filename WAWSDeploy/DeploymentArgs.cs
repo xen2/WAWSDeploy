@@ -45,6 +45,9 @@ namespace WAWSDeploy
         [ArgsMemberSwitch("w", "whatif", "wi")]
         public bool WhatIf { get; set; }
 
+        [ArgsMemberSwitch("usechecksum")]
+        public bool UseChecksum { get; set; }
+
         [ArgsMemberSwitch("t", "targetpath", "tp")]
         public string TargetPath { get; set; }
 

@@ -18,6 +18,7 @@ namespace WAWSDeploy
                 WriteLine(@" /au /AllowUntrusted: skip cert verification");
                 WriteLine(@" /v  /Verbose: Verbose mode");
                 WriteLine(@" /w  /WhatIf: don't actually perform the publishing");
+                WriteLine(@" /usechecksum: use checksum instead of last write timestamp to compare files");
                 WriteLine(@" /t  /TargetPath: the virtual or physical directory to deploy to");
                 return;
             }
@@ -41,6 +42,7 @@ namespace WAWSDeploy
                     !command.DeleteExistingFiles,
                     command.TraceLevel,
                     command.WhatIf,
+                    command.UseChecksum,
                     command.TargetPath
                     );
 
